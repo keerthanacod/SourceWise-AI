@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SourceWise AI</title><link rel="stylesheet" href="sidepanel.css"></head>
+<body>
+<header class="topbar"><div class="brand-mark">S</div><div class="brand"><strong>SourceWise AI</strong><span>Research sidekick</span></div><button id="readPage" class="small secondary">Read page</button></header>
+<section class="page-card"><div class="eyebrow">CURRENT PAGE</div><div id="pageTitle" class="page-title">No page read yet</div><div id="pageStatus" class="muted">Click “Read page” to use the current tab as evidence.</div><div class="row"><span id="pageWords" class="pill">0 characters</span><button id="clearPage" class="text-button">Clear</button></div></section>
+<section class="controls"><label for="mode">Answering mode</label><select id="mode"><option value="rag">RAG + LLM</option><option value="llm">LLM only</option><option value="evidence">Evidence only</option></select>
+<div class="file-row"><label class="file-button" for="files">+ Add PDF/TXT/MD</label><input id="files" type="file" accept=".pdf,.txt,.md" multiple hidden><span id="fileStatus" class="muted">No extra files indexed</span></div></section>
+<main id="chat" class="chat"><div class="welcome"><div class="welcome-icon">✦</div><h2>Let's explore this page.</h2><p>Read a webpage, then ask a question. I'll show supporting evidence when available.</p></div></main>
+<form id="askForm" class="composer"><textarea id="question" rows="2" placeholder="Ask about this webpage..." required></textarea><div class="composer-bottom"><span class="muted">Local • Ollama</span><button type="submit" id="send" class="send">Ask ↗</button></div></form>
+<div class="footer-note" id="backendStatus">Connecting to local backend…</div><script src="sidepanel.js"></script></body></html>

@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "SourceWise AI",
+  "version": "1.0.0",
+  "description": "Ask questions about the webpage you're browsing using a local AI assistant.",
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8000/*",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_title": "Open SourceWise AI"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  }
+}
